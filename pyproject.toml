@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "screen-atlas"
+version = "0.1.0"
+description = "A local screen map, design contract, and evidence workbench for humans and coding agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "ScreenAtlas contributors"}]
+dependencies = []
+
+[project.scripts]
+screen-atlas = "atlas.cli:main"
+screen-trellis = "atlas.cli:main"
+atlas = "atlas.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["atlas*", "screen_atlas*", "screen_trellis*"]
+
+[tool.setuptools.package-data]
+atlas = ["web/*", "migrations/*.sql", "examples/second-sole/*", "examples/second-sole/assets/*", "examples/second-sole/sources/*", "agent-skill/*.md"]

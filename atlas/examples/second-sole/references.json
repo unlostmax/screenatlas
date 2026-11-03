@@ -1,0 +1,423 @@
+[
+  {
+    "id": "profile",
+    "title": "Profile",
+    "sha256": "adb2c3de5732f5c9e78e7b00dea4300802027eb2816820a97f482cf79ed32f3a",
+    "path": "assets/adb2c3de5732f5c9e78e7b00dea4300802027eb2816820a97f482cf79ed32f3a.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, fifth phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Profile. Key content: max.m in Brisbane, AU, geometric grey avatar, 23 Listings, 118 Sold, 4.9 Rating, Edit profile and Share, My listings, Purchases, Saved, Payments, Shipping, Settings, Help. Profile selected in bottom navigation. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "my-listings",
+    "title": "My listings",
+    "sha256": "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734",
+    "path": "assets/24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734.png",
+    "provenance": {
+      "tool": "User-supplied reference",
+      "method": "Supplied original",
+      "source": "sources/my-listings.png",
+      "prompt": null,
+      "width": 852,
+      "height": 1846,
+      "scope": "Original supplied design PNG, retained byte for byte. Not a verified application capture or recorded review approval."
+    }
+  },
+  {
+    "id": "listing-actions",
+    "title": "Listing actions",
+    "sha256": "e1514893e325526b498f3804df775df032bfd8a1e257bcc0f09c571ee7f3484b",
+    "path": "assets/e1514893e325526b498f3804df775df032bfd8a1e257bcc0f09c571ee7f3484b.png",
+    "provenance": {
+      "tool": "User-supplied reference",
+      "method": "Supplied original",
+      "source": "sources/listing-actions.png",
+      "prompt": null,
+      "width": 852,
+      "height": 1846,
+      "scope": "Original supplied design PNG, retained byte for byte. Not a verified application capture or recorded review approval."
+    }
+  },
+  {
+    "id": "edit-listing",
+    "title": "Edit listing",
+    "sha256": "2032f0b42640e959b05afa49df5c908d0346c395bc37ea24747ae36a73532a10",
+    "path": "assets/2032f0b42640e959b05afa49df5c908d0346c395bc37ea24747ae36a73532a10.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Generated extension",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Edit listing screen for an existing grey New Balance 990v6. Cancel and Edit listing header, existing thumbnail, filled Brand New Balance, Model 990v6, US 9, Excellent condition and Price (AUD) $260 fields, short description, single orange Save changes button. Clearly an editing state, no success toast. Keep only this focused state, with no extra dashboards, features or screen variants.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "home",
+    "title": "Home",
+    "sha256": "f8a4063b7baa9e26195910cd9936f7f7d0fe84670b3291690f40cd183cbb01b6",
+    "path": "assets/f8a4063b7baa9e26195910cd9936f7f7d0fe84670b3291690f40cd183cbb01b6.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, first phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Home. Key content: Give your shoes a new home. Editorial sneaker hero, orange geometric backdrop, brand filters and two-column sneaker listings. Home selected in the five-item bottom navigation. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "search",
+    "title": "Search",
+    "sha256": "98217acf95817ed815e27fd1816b413eae68ef6338ae5230dd0ae5f44f8a76f1",
+    "path": "assets/98217acf95817ed815e27fd1816b413eae68ef6338ae5230dd0ae5f44f8a76f1.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, second phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Search. Key content: Search field, category chips, Popular right now with sneaker product tiles, Trending model rows. Search selected in bottom navigation. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "filters",
+    "title": "Search filters",
+    "sha256": "1e44ac8afe3ce05b0f8799382b3f72ee0abc16d3e0a92d8dbe179436674ba03f",
+    "path": "assets/1e44ac8afe3ce05b0f8799382b3f72ee0abc16d3e0a92d8dbe179436674ba03f.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, third screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Search filters. Key content: Filters sheet, close and Reset, Brand New Balance dropdown, US sizes 7 through 12 with 9 selected, Condition chips, Price range (AUD) slider, orange Apply filters button. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "listing",
+    "title": "Listing detail",
+    "sha256": "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe",
+    "path": "assets/1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, first screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Listing detail. Key content: Large grey New Balance 990v6 sneaker photo, back/share/bookmark controls, white bottom detail area, New Balance 990v6, US 9, Excellent condition, $260, orange Buy now and grey Make offer buttons. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "saved",
+    "title": "Saved listings",
+    "sha256": "9520aa098622f9a858b54e609a5ae59f535052545cd0e078d0593041047ed000",
+    "path": "assets/9520aa098622f9a858b54e609a5ae59f535052545cd0e078d0593041047ed000.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Generated extension",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Saved screen reached from Profile. Back arrow and Saved heading. Two-column grid of four realistic sneaker listings with saved bookmark controls, New Balance 990v6 $260, Nike Air Jordan 1 $180, Adidas Samba $120, Salomon XT-6 $200. Profile selected in bottom navigation. One coherent primary saved-list view. Keep only this focused state, with no extra dashboards, features or screen variants.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "sell",
+    "title": "Create listing",
+    "sha256": "564940cea20787eb0e4dba523a604f906fdff926f4ab73a5d16ea72dba73e4ef",
+    "path": "assets/564940cea20787eb0e4dba523a604f906fdff926f4ab73a5d16ea72dba73e4ef.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, third phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Create listing. Key content: Cancel and Save draft, three-step progress indicator, Add photos panel, Brand, Model, Size, Condition and Price (AUD) fields, orange Continue button, central orange sell navigation button. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "photos",
+    "title": "Add photos",
+    "sha256": "14f9cab67f7b3564054f14ebbd8cef40710b3b9ac15cd334d5b38f1e78cf4041",
+    "path": "assets/14f9cab67f7b3564054f14ebbd8cef40710b3b9ac15cd334d5b38f1e78cf4041.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, second screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Add photos. Key content: Cancel, Add photos, Done toolbar. Three-column image grid with seven grey New Balance 990v6 sneaker detail photographs and an add-photo tile. Spacious warm white background. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "listing-review",
+    "title": "Review listing",
+    "sha256": "d63914e5789a4c2e45a937784487e1be57e23398a98f88bf2873f70656b731bb",
+    "path": "assets/d63914e5789a4c2e45a937784487e1be57e23398a98f88bf2873f70656b731bb.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Generated extension",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Final sell-flow Review listing screen. Back arrow and Save draft, third step selected, a clear grey New Balance 990v6 photo, US 9, Excellent, price $260 AUD, small fields for shipping and description summary, one orange Publish listing button at bottom. Keep this sparse and polished. Keep only this focused state, with no extra dashboards, features or screen variants.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "listing-created",
+    "title": "Listing created",
+    "sha256": "433b600041458b1caa130fac2a9cd88c73d7bde070e119384dde69bc0bae1d85",
+    "path": "assets/433b600041458b1caa130fac2a9cd88c73d7bde070e119384dde69bc0bae1d85.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, sixth and final screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Listing created. Key content: Success screen with close control, large orange circle with white check, Listing created!, Your shoes are now live., orange View listing and grey Create another buttons. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "inbox",
+    "title": "Inbox",
+    "sha256": "0a283e44626ee617be8decb6887ab6579d2915b4fe65893821aa048c362dc0ca",
+    "path": "assets/0a283e44626ee617be8decb6887ab6579d2915b4fe65893821aa048c362dc0ca.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, fourth phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Inbox. Key content: Inbox title, Messages and Notifications tabs, compact conversation rows with circular avatars and sneaker thumbnails. Inbox selected in bottom navigation. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "conversation",
+    "title": "Conversation",
+    "sha256": "2f2f96916fb4099d36ac0da94a891becf9b0cc07e744415a073a2b22f71104af",
+    "path": "assets/2f2f96916fb4099d36ac0da94a891becf9b0cc07e744415a073a2b22f71104af.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, fifth screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Conversation. Key content: Chat with sarah_k, active now, New Balance 990v6 item strip $260, alternating availability and $220 negotiation messages, bottom message composer with camera and send controls. Preserve the existing design rather than inventing a new one.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "offer",
+    "title": "Make offer",
+    "sha256": "1f2b70928074c1097101ba4a4e5e6431b6bf19b798eca090f70c653a8c21bf81",
+    "path": "assets/1f2b70928074c1097101ba4a4e5e6431b6bf19b798eca090f70c653a8c21bf81.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Mood board reconstruction",
+      "prompt": "Use case: precise-object-edit. Image 1 is the Make offer screen to edit. Image 2 is the correct grey New Balance 990v6 sneaker reference. Change ONLY the small product thumbnail in image 1: it incorrectly shows a striped Adidas-style shoe. Replace it with the same grey New Balance 990v6 shown in image 2, with the recognizable N side mark, grey mesh/suede and chunky grey sole. Preserve every other pixel-level layout decision as closely as possible: warm ivory background, Make offer heading, item title New Balance 990v6, US 9, Excellent, $260, $220 offer, chips, message, orange Send offer button, status bar and home indicator. Keep one portrait screen, no device body or collage.",
+      "inputSha256": [
+        "1ffc49191126bfbe09d948fe8241e2a888620da9e68101e54afae87e9cd35fef",
+        "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe"
+      ],
+      "width": 934,
+      "height": 1685,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "checkout",
+    "title": "Checkout",
+    "sha256": "2bd1635ae4b14f18c234060cd0f677893e02c0aac416fb15c57d34c2899b4c61",
+    "path": "assets/2bd1635ae4b14f18c234060cd0f677893e02c0aac416fb15c57d34c2899b4c61.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Generated extension",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Checkout screen for one New Balance 990v6, US 9, Excellent, $260. Back and Checkout header, shoe thumbnail item summary, delivery to fictional buyer Alex, Brisbane QLD (do not invent a real street address), tracked delivery $15, payment method ending 4242 as illustrative test data, total $275 AUD and orange Place order button. A clean purchase review screen, no badges or upselling. Keep only this focused state, with no extra dashboards, features or screen variants.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "order-confirmed",
+    "title": "Order confirmed",
+    "sha256": "05f7f9f240fe0071dc43457de89655e3ad69a61c71cdc7cf320d3634b094ab59",
+    "path": "assets/05f7f9f240fe0071dc43457de89655e3ad69a61c71cdc7cf320d3634b094ab59.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Generated extension",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Successful purchase confirmation. Close control, orange circle with white check, Order confirmed, Your next pair is on its way. Compact New Balance 990v6 item image with $275 total including delivery. Orange View order and grey Keep browsing buttons. Warm white restrained surface. Keep only this focused state, with no extra dashboards, features or screen variants. Input image 3 shows the exact grey New Balance 990v6 pair. Use that same pair for the item photo; do not substitute another sneaker model.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734",
+        "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "purchase",
+    "title": "Order detail",
+    "sha256": "235768cd7d39fd1130a7774a38c2e424c9e28533c0b1193f294c389203307be0",
+    "path": "assets/235768cd7d39fd1130a7774a38c2e424c9e28533c0b1193f294c389203307be0.png",
+    "provenance": {
+      "tool": "Codex built-in Image Gen",
+      "method": "Generated extension",
+      "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Order detail for the purchased New Balance 990v6. Back arrow and Order detail header. Item photo and US 9 Excellent, order status Preparing to ship with a simple three-step delivery progress line, Total paid $275 AUD, delivery Brisbane QLD, orange Message seller button and secondary Back to purchases. Use fictional illustrative commerce data only. Keep only this focused state, with no extra dashboards, features or screen variants. Input image 3 shows the exact grey New Balance 990v6 pair. Use that same pair for the item photo; do not substitute another sneaker model.",
+      "inputSha256": [
+        "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734",
+        "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe"
+      ],
+      "width": 934,
+      "height": 1684,
+      "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+      "limitations": [
+        "Generated details can differ from the supplied design.",
+        "The referenced commerce app is not implemented or connected to live transactions."
+      ]
+    }
+  },
+  {
+    "id": "moodboard",
+    "title": "Original mood board",
+    "sha256": "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+    "path": "assets/362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f.png",
+    "provenance": {
+      "tool": "User-supplied reference",
+      "method": "Supplied original",
+      "source": "sources/moodboard.png",
+      "prompt": null,
+      "width": 1536,
+      "height": 1024,
+      "scope": "Original supplied design PNG, retained byte for byte. Not a verified application capture or recorded review approval."
+    }
+  }
+]

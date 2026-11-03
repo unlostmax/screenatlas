@@ -1,0 +1,1507 @@
+{
+  "schemaVersion": 1,
+  "id": "1bfacb73-31cd-4a2b-8377-617360e96737",
+  "name": "Second Sole",
+  "revision": 1,
+  "description": "A sneaker resale app mapped from supplied references and expanded with generated design states.",
+  "platforms": [
+    "iOS concept"
+  ],
+  "groups": [
+    {
+      "id": "home",
+      "title": "Home",
+      "note": "",
+      "x": 80,
+      "y": 80,
+      "w": 560,
+      "h": 2300
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "note": "",
+      "x": 780,
+      "y": 80,
+      "w": 560,
+      "h": 1150
+    },
+    {
+      "id": "sell",
+      "title": "Sell",
+      "note": "",
+      "x": 1480,
+      "y": 80,
+      "w": 560,
+      "h": 1750
+    },
+    {
+      "id": "inbox",
+      "title": "Inbox",
+      "note": "",
+      "x": 2180,
+      "y": 80,
+      "w": 560,
+      "h": 1750
+    },
+    {
+      "id": "profile",
+      "title": "Profile",
+      "note": "",
+      "x": 2880,
+      "y": 80,
+      "w": 560,
+      "h": 2350
+    },
+    {
+      "id": "direction",
+      "title": "Visual direction",
+      "note": "",
+      "x": 780,
+      "y": 1450,
+      "w": 560,
+      "h": 450
+    }
+  ],
+  "nodes": [
+    {
+      "id": "home",
+      "title": "Home",
+      "group": "home",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 90,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "f8a4063b7baa9e26195910cd9936f7f7d0fe84670b3291690f40cd183cbb01b6",
+        "path": "assets/f8a4063b7baa9e26195910cd9936f7f7d0fe84670b3291690f40cd183cbb01b6.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, first phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Home. Key content: Give your shoes a new home. Editorial sneaker hero, orange geometric backdrop, brand filters and two-column sneaker listings. Home selected in the five-item bottom navigation. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Discover pre-owned sneakers and start a purchase, search, or sale.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Open a pair",
+            "to": "listing",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Search",
+            "to": "search",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-3",
+            "label": "Sell a pair",
+            "to": "sell",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-4",
+            "label": "Inbox",
+            "to": "inbox",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-5",
+            "label": "Profile",
+            "to": "profile",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "listing",
+      "title": "Listing detail",
+      "group": "home",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 160,
+      "y": 650,
+      "w": 240,
+      "h": 433,
+      "reference": {
+        "sha256": "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe",
+        "path": "assets/1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, first screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Listing detail. Key content: Large grey New Balance 990v6 sneaker photo, back/share/bookmark controls, white bottom detail area, New Balance 990v6, US 9, Excellent condition, $260, orange Buy now and grey Make offer buttons. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Inspect one pair, check its condition and price, and buy or make an offer.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "A sold or removed pair cannot proceed to checkout; explain availability changes.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Buy now",
+            "to": "checkout",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Check current availability."
+          },
+          {
+            "id": "action-2",
+            "label": "Make offer",
+            "to": "offer",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-3",
+            "label": "Save pair",
+            "to": "saved",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Toggle the bookmark without placing an order."
+          },
+          {
+            "id": "action-4",
+            "label": "Back",
+            "to": "home",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "checkout",
+      "title": "Checkout",
+      "group": "home",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 160,
+      "y": 1230,
+      "w": 240,
+      "h": 433,
+      "reference": {
+        "sha256": "2bd1635ae4b14f18c234060cd0f677893e02c0aac416fb15c57d34c2899b4c61",
+        "path": "assets/2bd1635ae4b14f18c234060cd0f677893e02c0aac416fb15c57d34c2899b4c61.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Generated extension",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Checkout screen for one New Balance 990v6, US 9, Excellent, $260. Back and Checkout header, shoe thumbnail item summary, delivery to fictional buyer Alex, Brisbane QLD (do not invent a real street address), tracked delivery $15, payment method ending 4242 as illustrative test data, total $275 AUD and orange Place order button. A clean purchase review screen, no badges or upselling. Keep only this focused state, with no extra dashboards, features or screen variants.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Review the item, delivery, payment method, and total before placing an order.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Revalidate stock, price, shipping, and total. Payment failure must not show success or double-charge on retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Place order",
+            "to": "order-confirmed",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Use an idempotent purchase request; never charge twice."
+          },
+          {
+            "id": "action-2",
+            "label": "Back",
+            "to": "listing",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Do not place an order."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "order-confirmed",
+      "title": "Order confirmed",
+      "group": "home",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 1810,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "05f7f9f240fe0071dc43457de89655e3ad69a61c71cdc7cf320d3634b094ab59",
+        "path": "assets/05f7f9f240fe0071dc43457de89655e3ad69a61c71cdc7cf320d3634b094ab59.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Generated extension",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Successful purchase confirmation. Close control, orange circle with white check, Order confirmed, Your next pair is on its way. Compact New Balance 990v6 item image with $275 total including delivery. Orange View order and grey Keep browsing buttons. Warm white restrained surface. Keep only this focused state, with no extra dashboards, features or screen variants. Input image 3 shows the exact grey New Balance 990v6 pair. Use that same pair for the item photo; do not substitute another sneaker model.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734",
+            "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Confirm one successful order and provide a route to its status.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Show success only for the returned order ID, not an optimistic local state.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "View order",
+            "to": "purchase",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Keep browsing",
+            "to": "home",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "group": "search",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 90,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "98217acf95817ed815e27fd1816b413eae68ef6338ae5230dd0ae5f44f8a76f1",
+        "path": "assets/98217acf95817ed815e27fd1816b413eae68ef6338ae5230dd0ae5f44f8a76f1.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, second phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Search. Key content: Search field, category chips, Popular right now with sneaker product tiles, Trending model rows. Search selected in bottom navigation. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Find a brand or model and narrow the available listings.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Open result",
+            "to": "listing",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Filters",
+            "to": "filters",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-3",
+            "label": "Home",
+            "to": "home",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "filters",
+      "title": "Search filters",
+      "group": "search",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 650,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "1e44ac8afe3ce05b0f8799382b3f72ee0abc16d3e0a92d8dbe179436674ba03f",
+        "path": "assets/1e44ac8afe3ce05b0f8799382b3f72ee0abc16d3e0a92d8dbe179436674ba03f.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, third screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Search filters. Key content: Filters sheet, close and Reset, Brand New Balance dropdown, US sizes 7 through 12 with 9 selected, Condition chips, Price range (AUD) slider, orange Apply filters button. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Refine search by brand, size, condition, and price in AUD.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "No matches and load failure are different states. Reject an inverted price range.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Apply filters",
+            "to": "search",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Preserve the query and show matching results."
+          },
+          {
+            "id": "action-2",
+            "label": "Reset",
+            "to": null,
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Reset draft filters without submitting."
+          },
+          {
+            "id": "action-3",
+            "label": "Close",
+            "to": "search",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Keep previously applied filters."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "sell",
+      "title": "Sell",
+      "group": "sell",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 90,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "564940cea20787eb0e4dba523a604f906fdff926f4ab73a5d16ea72dba73e4ef",
+        "path": "assets/564940cea20787eb0e4dba523a604f906fdff926f4ab73a5d16ea72dba73e4ef.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, third phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Create listing. Key content: Cancel and Save draft, three-step progress indicator, Add photos panel, Brand, Model, Size, Condition and Price (AUD) fields, orange Continue button, central orange sell navigation button. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Describe a pair, attach photos, and save a draft before publishing.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Missing photos or required fields block continuation. Save failure retains all entered data.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Add photos",
+            "to": "photos",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Continue",
+            "to": "listing-review",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Validate required fields."
+          },
+          {
+            "id": "action-3",
+            "label": "Save draft",
+            "to": "my-listings",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Keep an unpublished draft."
+          },
+          {
+            "id": "action-4",
+            "label": "Cancel",
+            "to": "my-listings",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Ask before discarding changes."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "photos",
+      "title": "Add photos",
+      "group": "sell",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 40,
+      "y": 650,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "14f9cab67f7b3564054f14ebbd8cef40710b3b9ac15cd334d5b38f1e78cf4041",
+        "path": "assets/14f9cab67f7b3564054f14ebbd8cef40710b3b9ac15cd334d5b38f1e78cf4041.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, second screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Add photos. Key content: Cancel, Add photos, Done toolbar. Three-column image grid with seven grey New Balance 990v6 sneaker detail photographs and an add-photo tile. Spacious warm white background. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Add and review listing photos in a three-column grid.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Maximum ten photos. Handle denied photo access and upload failures without clearing earlier selections.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Done",
+            "to": "sell",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Keep the selected photos in this draft."
+          },
+          {
+            "id": "action-2",
+            "label": "Cancel",
+            "to": "sell",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Do not discard previously saved photos."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "listing-review",
+      "title": "Review listing",
+      "group": "sell",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 300,
+      "y": 650,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "d63914e5789a4c2e45a937784487e1be57e23398a98f88bf2873f70656b731bb",
+        "path": "assets/d63914e5789a4c2e45a937784487e1be57e23398a98f88bf2873f70656b731bb.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Generated extension",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Final sell-flow Review listing screen. Back arrow and Save draft, third step selected, a clear grey New Balance 990v6 photo, US 9, Excellent, price $260 AUD, small fields for shipping and description summary, one orange Publish listing button at bottom. Keep this sparse and polished. Keep only this focused state, with no extra dashboards, features or screen variants.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Review the item, delivery terms, and description before publishing.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Publish listing",
+            "to": "listing-created",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Publish once after successful validation."
+          },
+          {
+            "id": "action-2",
+            "label": "Edit details",
+            "to": "sell",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Preserve the draft and its photos."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "listing-created",
+      "title": "Listing created",
+      "group": "sell",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 300,
+      "y": 1230,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "433b600041458b1caa130fac2a9cd88c73d7bde070e119384dde69bc0bae1d85",
+        "path": "assets/433b600041458b1caa130fac2a9cd88c73d7bde070e119384dde69bc0bae1d85.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, sixth and final screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Listing created. Key content: Success screen with close control, large orange circle with white check, Listing created!, Your shoes are now live., orange View listing and grey Create another buttons. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Confirm that publishing succeeded and open the new listing.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "View listing",
+            "to": "listing",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Open the newly created listing ID."
+          },
+          {
+            "id": "action-2",
+            "label": "Create another",
+            "to": "sell",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Start a separate draft."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "inbox",
+      "title": "Inbox",
+      "group": "inbox",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 90,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "0a283e44626ee617be8decb6887ab6579d2915b4fe65893821aa048c362dc0ca",
+        "path": "assets/0a283e44626ee617be8decb6887ab6579d2915b4fe65893821aa048c362dc0ca.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, fourth phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Inbox. Key content: Inbox title, Messages and Notifications tabs, compact conversation rows with circular avatars and sneaker thumbnails. Inbox selected in bottom navigation. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Read buyer and seller conversations linked to their sneaker listings.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Open conversation",
+            "to": "conversation",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Profile",
+            "to": "profile",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "conversation",
+      "title": "Conversation",
+      "group": "inbox",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 650,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "2f2f96916fb4099d36ac0da94a891becf9b0cc07e744415a073a2b22f71104af",
+        "path": "assets/2f2f96916fb4099d36ac0da94a891becf9b0cc07e744415a073a2b22f71104af.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at bottom row, fifth screen from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Conversation. Key content: Chat with sarah_k, active now, New Balance 990v6 item strip $260, alternating availability and $220 negotiation messages, bottom message composer with camera and send controls. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Discuss a specific pair and keep messages attached to that listing.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Make offer",
+            "to": "offer",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "View pair",
+            "to": "listing",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-3",
+            "label": "Back to inbox",
+            "to": "inbox",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "offer",
+      "title": "Make offer",
+      "group": "inbox",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 1230,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "1f2b70928074c1097101ba4a4e5e6431b6bf19b798eca090f70c653a8c21bf81",
+        "path": "assets/1f2b70928074c1097101ba4a4e5e6431b6bf19b798eca090f70c653a8c21bf81.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: precise-object-edit. Image 1 is the Make offer screen to edit. Image 2 is the correct grey New Balance 990v6 sneaker reference. Change ONLY the small product thumbnail in image 1: it incorrectly shows a striped Adidas-style shoe. Replace it with the same grey New Balance 990v6 shown in image 2, with the recognizable N side mark, grey mesh/suede and chunky grey sole. Preserve every other pixel-level layout decision as closely as possible: warm ivory background, Make offer heading, item title New Balance 990v6, US 9, Excellent, $260, $220 offer, chips, message, orange Send offer button, status bar and home indicator. Keep one portrait screen, no device body or collage.",
+          "inputSha256": [
+            "1ffc49191126bfbe09d948fe8241e2a888620da9e68101e54afae87e9cd35fef",
+            "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe"
+          ],
+          "width": 934,
+          "height": 1685,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Send a proposed price and an optional message for the selected pair.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Validate a positive AUD amount. A failed send keeps the draft and retry does not duplicate the offer.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Send offer",
+            "to": "conversation",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Send one price proposal; do not create an order."
+          },
+          {
+            "id": "action-2",
+            "label": "Close",
+            "to": "listing",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Do not send the draft offer."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "profile",
+      "title": "Profile",
+      "group": "profile",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 170,
+      "y": 90,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "adb2c3de5732f5c9e78e7b00dea4300802027eb2816820a97f482cf79ed32f3a",
+        "path": "assets/adb2c3de5732f5c9e78e7b00dea4300802027eb2816820a97f482cf79ed32f3a.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Mood board reconstruction",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Isolate and faithfully reconstruct ONLY the screen located at top row, fifth phone from the left of input image 1. Preserve its composition, hierarchy, colors, product imagery and UI details. Expand it as an individual clean reference image rather than showing any adjacent screens. The screen is Profile. Key content: max.m in Brisbane, AU, geometric grey avatar, 23 Listings, 118 Sold, 4.9 Rating, Edit profile and Share, My listings, Purchases, Saved, Payments, Shipping, Settings, Help. Profile selected in bottom navigation. Preserve the existing design rather than inventing a new one.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Manage your seller profile, listings, purchases, and saved pairs.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "My listings",
+            "to": "my-listings",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Purchases",
+            "to": "purchase",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-3",
+            "label": "Saved",
+            "to": "saved",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-4",
+            "label": "Home",
+            "to": "home",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-5",
+            "label": "Sell a pair",
+            "to": "sell",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-6",
+            "label": "Messages",
+            "to": "inbox",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "my-listings",
+      "title": "My listings",
+      "group": "profile",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 40,
+      "y": 650,
+      "w": 220,
+      "h": 477,
+      "reference": {
+        "sha256": "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734",
+        "path": "assets/24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734.png",
+        "provenance": {
+          "tool": "User-supplied reference",
+          "method": "Supplied original",
+          "source": "sources/my-listings.png",
+          "prompt": null,
+          "width": 852,
+          "height": 1846,
+          "scope": "Original supplied design PNG, retained byte for byte. Not a verified application capture or recorded review approval."
+        }
+      },
+      "contract": {
+        "purpose": "See listing performance and manage active, sold, draft, and archived pairs.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Keep filter selection on return. Sold and archived rows must not offer active-only operations.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "More actions",
+            "to": "listing-actions",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Choose the exact listing row."
+          },
+          {
+            "id": "action-2",
+            "label": "Add listing",
+            "to": "sell",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Start a new draft."
+          },
+          {
+            "id": "action-3",
+            "label": "Open listing",
+            "to": "listing",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-4",
+            "label": "Back to profile",
+            "to": "profile",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "saved",
+      "title": "Saved listings",
+      "group": "profile",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 300,
+      "y": 650,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "9520aa098622f9a858b54e609a5ae59f535052545cd0e078d0593041047ed000",
+        "path": "assets/9520aa098622f9a858b54e609a5ae59f535052545cd0e078d0593041047ed000.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Generated extension",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Saved screen reached from Profile. Back arrow and Saved heading. Two-column grid of four realistic sneaker listings with saved bookmark controls, New Balance 990v6 $260, Nike Air Jordan 1 $180, Adidas Samba $120, Salomon XT-6 $200. Profile selected in bottom navigation. One coherent primary saved-list view. Keep only this focused state, with no extra dashboards, features or screen variants.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Return to saved pairs and open the same shared listing detail.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Preserve context on Back. Distinguish unavailable data from an empty state and provide a retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Open saved pair",
+            "to": "listing",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Back to profile",
+            "to": "profile",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "listing-actions",
+      "title": "Listing actions",
+      "group": "profile",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 40,
+      "y": 1230,
+      "w": 220,
+      "h": 477,
+      "reference": {
+        "sha256": "e1514893e325526b498f3804df775df032bfd8a1e257bcc0f09c571ee7f3484b",
+        "path": "assets/e1514893e325526b498f3804df775df032bfd8a1e257bcc0f09c571ee7f3484b.png",
+        "provenance": {
+          "tool": "User-supplied reference",
+          "method": "Supplied original",
+          "source": "sources/listing-actions.png",
+          "prompt": null,
+          "width": 852,
+          "height": 1846,
+          "scope": "Original supplied design PNG, retained byte for byte. Not a verified application capture or recorded review approval."
+        }
+      },
+      "contract": {
+        "purpose": "Choose an action for one owned listing without losing the list context.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Recheck ownership and listing status. Canceling deletion leaves the listing unchanged. A stale row requires refresh.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Edit listing",
+            "to": "edit-listing",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Duplicate listing",
+            "to": "sell",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Start a new draft; never copy the original listing ID."
+          },
+          {
+            "id": "action-3",
+            "label": "Pause listing",
+            "to": "my-listings",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Pause only the chosen active listing."
+          },
+          {
+            "id": "action-4",
+            "label": "Archive listing",
+            "to": "my-listings",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Archive the chosen listing; preserve history."
+          },
+          {
+            "id": "action-5",
+            "label": "Share listing",
+            "to": null,
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Open the platform share surface for the selected listing."
+          },
+          {
+            "id": "action-6",
+            "label": "Delete listing",
+            "to": "my-listings",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Ask for confirmation; cancel leaves the listing unchanged."
+          },
+          {
+            "id": "action-7",
+            "label": "Dismiss",
+            "to": "my-listings",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "No changes."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "purchase",
+      "title": "Order detail",
+      "group": "profile",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 300,
+      "y": 1230,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "235768cd7d39fd1130a7774a38c2e424c9e28533c0b1193f294c389203307be0",
+        "path": "assets/235768cd7d39fd1130a7774a38c2e424c9e28533c0b1193f294c389203307be0.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Generated extension",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Order detail for the purchased New Balance 990v6. Back arrow and Order detail header. Item photo and US 9 Excellent, order status Preparing to ship with a simple three-step delivery progress line, Total paid $275 AUD, delivery Brisbane QLD, orange Message seller button and secondary Back to purchases. Use fictional illustrative commerce data only. Keep only this focused state, with no extra dashboards, features or screen variants. Input image 3 shows the exact grey New Balance 990v6 pair. Use that same pair for the item photo; do not substitute another sneaker model.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734",
+            "1831747aae352e16a0a13a581ed8d7a06876d957bad6a781e2440e92ffc564fe"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Track the purchased pair and contact its seller.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "Unavailable tracking and a delayed shipment are distinct. Preserve the order ID on every retry.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Message seller",
+            "to": "conversation",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          },
+          {
+            "id": "action-2",
+            "label": "Back to purchases",
+            "to": "profile",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": ""
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "edit-listing",
+      "title": "Edit listing",
+      "group": "profile",
+      "kind": "screen",
+      "platform": "iOS concept",
+      "x": 40,
+      "y": 1810,
+      "w": 220,
+      "h": 397,
+      "reference": {
+        "sha256": "2032f0b42640e959b05afa49df5c908d0346c395bc37ea24747ae36a73532a10",
+        "path": "assets/2032f0b42640e959b05afa49df5c908d0346c395bc37ea24747ae36a73532a10.png",
+        "provenance": {
+          "tool": "Codex built-in Image Gen",
+          "method": "Generated extension",
+          "prompt": "Use case: ui-mockup. Produce ONE standalone portrait mobile app screen for this sneaker resale app. Input image 1 is the supplied mood board and input image 2 is the supplied full-size My listings screen; both are visual references. Match their warm ivory surfaces, black neutral sans-serif typography, very pale grey containers, photographic sneakers, thin outline icons and vivid orange #ff4c00 primary actions. Reproduce the same app family with restrained spacing and realistic concise text. Single full-screen image edge to edge, portrait aspect 852:1846, high resolution. No surrounding collage, no labels outside the screen, no extra device body, no outer backdrop or perspective. Preserve the simple OS status and bottom navigation treatment when that screen has it in the reference. Do not redesign the logo. This is illustrative example UI, not a real app capture. Create this additional connected state in the SAME app: Edit listing screen for an existing grey New Balance 990v6. Cancel and Edit listing header, existing thumbnail, filled Brand New Balance, Model 990v6, US 9, Excellent condition and Price (AUD) $260 fields, short description, single orange Save changes button. Clearly an editing state, no success toast. Keep only this focused state, with no extra dashboards, features or screen variants.",
+          "inputSha256": [
+            "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+            "24f7f7eaed67c8e218aac7e97c2ad8d964c359f3a54a8821139ec62c2552c734"
+          ],
+          "width": 934,
+          "height": 1684,
+          "scope": "Illustrative example design reference; not an application screenshot or a recorded reviewer approval.",
+          "limitations": [
+            "Generated details can differ from the supplied design.",
+            "The referenced commerce app is not implemented or connected to live transactions."
+          ]
+        }
+      },
+      "contract": {
+        "purpose": "Edit a listing while preserving its identity, photos, and current saved version.",
+        "entry": "Arrive through a mapped action with the relevant listing, conversation, or order identity.",
+        "data": "Illustrative sneaker marketplace data in AUD. Keep item identity, size, condition, price, and imagery consistent.",
+        "states": "The reference shows the named state only. Specify loading, empty, error, and disabled states separately during implementation.",
+        "edgeCases": "A save failure retains the draft; concurrent edits require reconciliation, not silent overwrite.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Save changes",
+            "to": "my-listings",
+            "kind": "navigation",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Validate and save this listing."
+          },
+          {
+            "id": "action-2",
+            "label": "Cancel",
+            "to": "my-listings",
+            "kind": "return",
+            "condition": "Only when the selected item is available and the user has permission.",
+            "effect": "Ask before discarding unsaved changes."
+          }
+        ],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    },
+    {
+      "id": "moodboard",
+      "title": "Original mood board",
+      "group": "direction",
+      "kind": "anchor",
+      "platform": "iOS concept",
+      "x": 40,
+      "y": 90,
+      "w": 480,
+      "h": 320,
+      "reference": {
+        "sha256": "362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f",
+        "path": "assets/362b119903cffea16f8d4b3ef50d1f4802fc1084a3aa4464ba4b4117eddfe94f.png",
+        "provenance": {
+          "tool": "User-supplied reference",
+          "method": "Supplied original",
+          "source": "sources/moodboard.png",
+          "prompt": null,
+          "width": 1536,
+          "height": 1024,
+          "scope": "Original supplied design PNG, retained byte for byte. Not a verified application capture or recorded review approval."
+        }
+      },
+      "contract": {
+        "purpose": "Preserve the supplied multi-screen design direction alongside its individual derivatives.",
+        "entry": "Original user-supplied design board.",
+        "data": "Five primary navigation screens and six supporting states.",
+        "states": "Visual direction only; no simulated interactions.",
+        "edgeCases": "Individual derivatives may differ slightly from the source board.",
+        "accessibility": "Provide readable contrast, accessible labels and touch targets, text scaling, keyboard access, and reduced motion. Do not rely on color alone.",
+        "acceptance": "Exercise each mapped action in the implementation. Capture this exact state and compare with the reference; a static image does not establish working behavior.",
+        "actions": [],
+        "sources": [
+          "product",
+          "visual",
+          "provenance"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "direction-home",
+      "from": "moodboard",
+      "to": "home",
+      "label": "Visual reference",
+      "kind": "reference"
+    },
+    {
+      "id": "direction-profile",
+      "from": "moodboard",
+      "to": "profile",
+      "label": "Visual reference",
+      "kind": "reference"
+    },
+    {
+      "id": "direction-sell",
+      "from": "moodboard",
+      "to": "sell",
+      "label": "Visual reference",
+      "kind": "reference"
+    },
+    {
+      "id": "direction-inbox",
+      "from": "moodboard",
+      "to": "inbox",
+      "label": "Visual reference",
+      "kind": "reference"
+    }
+  ],
+  "documents": [
+    {
+      "id": "product",
+      "title": "Product brief",
+      "body": "Second Sole is an illustrative peer-to-peer sneaker resale app. Buyers discover, save, negotiate and purchase pairs. Sellers create and manage listings. Conversations and orders retain stable listing identity. The map describes intended behavior; no commerce backend, payment processing, real seller data, or working sneaker app is bundled."
+    },
+    {
+      "id": "visual",
+      "title": "Visual direction",
+      "body": "Preserve the supplied warm ivory, black typography, photographic sneakers, pale grey surfaces, and orange primary actions. Five main destinations: Home, Search, Sell, Inbox, Profile. Keep ScreenAtlas chrome separate from the app design. Original board and full-size supplied screens remain under sources/."
+    },
+    {
+      "id": "provenance",
+      "title": "Reference provenance",
+      "body": "Three original supplied PNGs are retained byte for byte: the mood board, My listings, and its action sheet. Eleven standalone screen derivatives were reconstructed with the built-in Image Gen tool from the mood board; these are not exact pixel crops. Six further states extend the same app. Exact prompts and input/output digests are in prompts.json and references.json. None of these images is a real app capture or a recorded reviewer approval."
+    }
+  ]
+}

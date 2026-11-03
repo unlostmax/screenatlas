@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>ScreenAtlas — screen workbench</title>
+    <link rel="stylesheet" href="/app.css" />
+    <script src="/connections.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="ScreenAtlas home">ScreenAtlas</a>
+      <div class="project-switch">
+        <strong id="project-name">Your application</strong>
+        <button
+          id="project-settings"
+          class="icon-button"
+          aria-label="Project settings"
+          data-icon="chevron-down"
+        ></button>
+      </div>
+      <label class="searchbox"
+        ><span data-icon="search" aria-hidden="true"></span
+        ><input
+          id="search"
+          type="search"
+          placeholder="Find a screen…"
+          aria-label="Find a screen"
+        /><kbd>/</kbd></label
+      >
+      <div class="nav-tabs">
+        <button id="map-tab" class="active">
+          <span data-icon="grid" aria-hidden="true"></span> Screen map</button
+        ><button id="review-open">
+          <span data-icon="message-square" aria-hidden="true"></span> Review
+          <span class="count" id="review-count">0</span>
+        </button>
+        <button id="history-open">
+          <span data-icon="clock" aria-hidden="true"></span>History
+        </button>
+        <button id="guide-open">
+          <span data-icon="help-circle" aria-hidden="true"></span>Get started
+        </button>
+      </div>
+      <nav id="groups" aria-label="Canvas groups"></nav>
+      <div class="section-label screen-list-heading">
+        <span>Results</span><span id="screen-count">0</span>
+      </div>
+      <nav id="screen-list" aria-label="Screens and states"></nav>
+      <div class="sidebar-footer">
+        <span id="connection">Connecting…</span
+        ><button id="all-groups" class="text-button">Show all</button>
+      </div>
+    </aside>
+    <header class="topbar">
+      <div class="map-heading">
+        <strong>Screen map</strong>
+        <div id="inventory" aria-label="Project inventory"></div>
+      </div>
+      <div class="top-actions">
+        <button
+          id="layout-toggle"
+          aria-pressed="false"
+          aria-label="Edit layout"
+        >
+          Layout</button
+        ><button id="add-screen" class="primary">
+          <span data-icon="plus" aria-hidden="true"></span>Add screen
+        </button>
+      </div>
+    </header>
+    <main
+      id="viewport"
+      tabindex="0"
+      aria-label="Screen map. Drag to pan, scroll to zoom. Use the screen list to navigate with a keyboard."
+    >
+      <div id="world">
+        <div id="zones"></div>
+        <svg id="edges" aria-hidden="true"></svg>
+        <div id="cards"></div>
+        <div id="canvas-pins"></div>
+      </div>
+      <div class="connection-key">
+        <div id="flow-legend" aria-label="Connection direction">
+          <span id="main-flow-label">Main flow</span>
+          <div id="connection-filters" hidden>
+            <button
+              id="connections-outgoing"
+              class="flow-outgoing"
+              aria-pressed="true"
+            >
+              Outgoing
+            </button>
+            <button
+              id="connections-incoming"
+              class="flow-incoming"
+              aria-pressed="false"
+            >
+              Incoming
+            </button>
+            <button id="connections-all" aria-pressed="false">All</button>
+          </div>
+        </div>
+        <button id="fit-connections" hidden>Fit connections</button>
+      </div>
+      <div id="connection-readout" hidden aria-live="polite"></div>
+      <div id="empty-map" class="empty-map" hidden>
+        <h1>Start your app's screen map</h1>
+        <p>Describe your app in Codex. Bring the generated designs here.</p>
+        <div class="button-row">
+          <button id="empty-start" class="primary">
+            Get started with Codex
+          </button>
+          <button id="empty-add">Add a screen manually</button>
+        </div>
+      </div>
+      <div id="hidden-map" class="empty-map" hidden>
+        <h1>All screens are hidden</h1>
+        <p>Use the checkboxes to show screens on the canvas.</p>
+        <button id="show-hidden" class="primary">Show all screens</button>
+      </div>
+      <div class="map-toolbar">
+        <button id="zoom-out" aria-label="Zoom out" data-icon="minus"></button
+        ><output id="zoom-level">100%</output
+        ><button id="zoom-in" aria-label="Zoom in" data-icon="plus"></button
+        ><span class="toolbar-divider"></span><button id="fit">Fit map</button
+        ><button
+          id="focus"
+          aria-label="Focus selected screen"
+          data-icon="crosshair"
+        ></button>
+      </div>
+      <button id="minimap-toggle" class="minimap-toggle" aria-expanded="true">
+        Overview</button
+      ><svg
+        id="minimap"
+        role="img"
+        aria-label="Map overview. Click to navigate."
+      ></svg>
+    </main>
+    <aside
+      id="inspector"
+      class="inspector"
+      aria-label="Selected screen"
+      hidden
+    ></aside>
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+    <div id="fatal" class="fatal" role="alert" hidden>
+      <h1>ScreenAtlas couldn't open this project</h1>
+      <p id="fatal-message"></p>
+      <button id="retry-load">Try again</button>
+    </div>
+
+    <dialog id="image-dialog" class="image-dialog">
+      <div class="dialog-header">
+        <div>
+          <h2 id="image-title">Screen review</h2>
+        </div>
+        <button
+          class="close"
+          data-close="image-dialog"
+          aria-label="Close image viewer"
+        >
+          ×
+        </button>
+      </div>
+      <div id="image-controls" class="image-controls"></div>
+      <div id="comparison" class="comparison">
+        <figure id="design-pane">
+          <figcaption id="design-label">Reference</figcaption>
+          <div class="image-holder" id="design-holder">
+            <img id="design-image" alt="Design reference" />
+            <div class="image-pins" id="design-pins"></div>
+          </div>
+        </figure>
+        <figure id="capture-pane" hidden>
+          <figcaption id="capture-label">App screenshot</figcaption>
+          <div class="image-holder" id="capture-holder">
+            <img id="capture-image" alt="Application screenshot" />
+            <div class="image-pins" id="capture-pins"></div>
+          </div>
+        </figure>
+      </div>
+      <div id="image-decisions" class="image-decisions"></div>
+    </dialog>
+
+    <dialog id="editor-dialog" class="editor-dialog">
+      <form id="screen-form">
+        <div class="dialog-header">
+          <div>
+            <h2 id="editor-title">Add a screen</h2>
+          </div>
+          <button
+            type="button"
+            class="close"
+            data-close="editor-dialog"
+            aria-label="Close screen editor"
+          >
+            ×
+          </button>
+        </div>
+        <div class="form-scroll">
+          <div class="field-pair">
+            <label
+              >Screen title<input
+                name="title"
+                required
+                maxlength="200"
+                placeholder="Library / empty" /></label
+            ><label
+              >Stable ID<input
+                name="id"
+                required
+                pattern="[a-zA-Z0-9][a-zA-Z0-9_.-]{0,119}"
+                placeholder="library-empty"
+            /></label>
+          </div>
+          <div class="field-trio">
+            <label>Group<select name="group"></select></label
+            ><label
+              >Platform<input
+                name="platform"
+                maxlength="100"
+                list="platform-options" /></label
+            ><label
+              >Surface type<select name="kind">
+                <option value="screen">Screen / state</option>
+                <option value="anchor">Visual anchor</option>
+                <option value="frame">Animation frame</option>
+                <option value="sheet">Contact sheet</option>
+                <option value="gap">Design gap</option>
+                <option value="system">External / system</option>
+                <option value="hub">Navigation hub</option>
+              </select></label
+            >
+          </div>
+          <datalist id="platform-options"></datalist>
+          <p class="field-hint">
+            Use one stable ID per screen or state. Shared screens can have
+            several entry points.
+          </p>
+          <label
+            >Responsibility<textarea
+              name="purpose"
+              rows="3"
+              placeholder="What does this screen help someone do?"
+            ></textarea>
+          </label>
+          <div class="field-pair">
+            <label
+              >Entry conditions<textarea
+                name="entry"
+                rows="3"
+                placeholder="How is this screen reached? What must be true?"
+              ></textarea></label
+            ><label
+              >Data and content<textarea
+                name="data"
+                rows="3"
+                placeholder="Required inputs, known values, and unavailable data."
+              ></textarea>
+            </label>
+          </div>
+          <div class="subsection-heading">
+            <h3>Actions & destinations</h3>
+            <button type="button" id="action-add">＋ Add action</button>
+          </div>
+          <div id="action-fields"></div>
+          <div class="field-pair">
+            <label
+              >States<textarea
+                name="states"
+                rows="4"
+                placeholder="Loading, populated, empty, error, selection…"
+              ></textarea></label
+            ><label
+              >Edge cases & recovery<textarea
+                name="edgeCases"
+                rows="4"
+                placeholder="Cancellation, interruption, permissions, retry…"
+              ></textarea>
+            </label>
+          </div>
+          <div class="field-pair">
+            <label
+              >Accessibility & motion<textarea
+                name="accessibility"
+                rows="3"
+                placeholder="Keyboard, labels, focus, contrast, reduced motion…"
+              ></textarea></label
+            ><label
+              >Acceptance examples<textarea
+                name="acceptance"
+                rows="3"
+                placeholder="Observable behavior to verify in the real application."
+              ></textarea>
+            </label>
+          </div>
+          <label
+            >Supporting documents<select
+              name="sources"
+              multiple
+              aria-label="Supporting documents"
+            ></select
+          ></label>
+          <details>
+            <summary>Map placement</summary>
+            <div class="field-four">
+              <label
+                >X<input
+                  name="x"
+                  type="number"
+                  min="0"
+                  max="100000"
+                  required /></label
+              ><label
+                >Y<input
+                  name="y"
+                  type="number"
+                  min="0"
+                  max="100000"
+                  required /></label
+              ><label
+                >Width<input
+                  name="w"
+                  type="number"
+                  min="160"
+                  max="2000"
+                  required /></label
+              ><label
+                >Height<input
+                  name="h"
+                  type="number"
+                  min="160"
+                  max="3000"
+                  required
+              /></label>
+            </div>
+          </details>
+          <label class="check-label"
+            ><input name="retired" type="checkbox" />Retire this screen (keep
+            its identity and history)</label
+          >
+          <p id="editor-error" class="error" role="alert"></p>
+        </div>
+        <div class="form-footer">
+          <span class="small-note"
+            >Drafts stay on this browser until saved or discarded.</span
+          ><button type="button" id="editor-discard">Discard draft</button
+          ><button type="submit" class="primary">Save screen</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="settings-dialog" class="editor-dialog">
+      <form id="settings-form">
+        <div class="dialog-header">
+          <div>
+            <h2>Your application</h2>
+          </div>
+          <button
+            type="button"
+            class="close"
+            data-close="settings-dialog"
+            aria-label="Close settings"
+          >
+            ×
+          </button>
+        </div>
+        <div class="form-scroll">
+          <label
+            >Application name<input
+              name="name"
+              required
+              maxlength="200" /></label
+          ><label
+            >Description<textarea name="description" rows="2"></textarea></label
+          ><label
+            >Platforms<input
+              name="platforms"
+              placeholder="Web, Android, iOS, desktop…"
+          /></label>
+          <div class="subsection-heading">
+            <h3>Groups</h3>
+            <button id="group-add" type="button">Add group</button>
+          </div>
+          <div id="group-fields"></div>
+          <div class="subsection-heading">
+            <h3>Product & visual direction</h3>
+            <button id="document-add" type="button">＋ Add document</button>
+          </div>
+          <p class="small-note">
+            Keep product behavior and presentation guidance distinct. Contracts
+            can link to these sources.
+          </p>
+          <div id="document-fields"></div>
+          <p id="settings-error" class="error" role="alert"></p>
+        </div>
+        <div class="form-footer">
+          <button type="submit" class="primary">Save project</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="comment-dialog" class="small-dialog">
+      <form id="comment-form">
+        <div class="dialog-header">
+          <div>
+            <h2 id="comment-title">Leave feedback</h2>
+          </div>
+          <button
+            type="button"
+            class="close"
+            data-close="comment-dialog"
+            aria-label="Close feedback draft"
+          >
+            ×
+          </button>
+        </div>
+        <div class="dialog-body">
+          <p id="comment-context" class="small-note"></p>
+          <label
+            >What should change?<textarea
+              id="comment-body"
+              required
+              maxlength="20000"
+              rows="5"
+              placeholder="Describe the intended change…"
+            ></textarea>
+          </label>
+          <p id="comment-error" class="error" role="alert"></p>
+        </div>
+        <div class="form-footer">
+          <button type="button" id="comment-discard">Discard draft</button
+          ><button type="submit" class="primary">Save feedback</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="review-dialog" class="review-dialog">
+      <div class="dialog-header">
+        <div>
+          <h2>Review</h2>
+        </div>
+        <div class="inline-actions">
+          <select id="review-filter" aria-label="Filter feedback">
+            <option value="active">Active feedback</option>
+            <option value="all">All feedback</option>
+            <option value="ready">Ready for review</option>
+            <option value="resolved">Resolved</option></select
+          ><button
+            class="close"
+            data-close="review-dialog"
+            aria-label="Close review inbox"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+      <div class="review-columns">
+        <div id="thread-list"></div>
+        <section id="thread-detail">
+          <div class="empty-detail">
+            Select feedback to read the conversation.
+          </div>
+        </section>
+      </div>
+    </dialog>
+
+    <dialog id="history-dialog" class="editor-dialog">
+      <div class="dialog-header">
+        <div>
+          <h2>Project history</h2>
+        </div>
+        <button
+          class="close"
+          data-close="history-dialog"
+          aria-label="Close history"
+        >
+          ×
+        </button>
+      </div>
+      <div id="history-content" class="dialog-body"></div>
+    </dialog>
+    <dialog id="document-dialog" class="editor-dialog">
+      <div class="dialog-header">
+        <h2 id="document-title">Supporting document</h2>
+        <button
+          class="close"
+          data-close="document-dialog"
+          aria-label="Close document"
+        >
+          ×
+        </button>
+      </div>
+      <pre id="document-body" class="document-body"></pre>
+    </dialog>
+    <dialog id="guide-dialog" class="editor-dialog">
+      <div class="dialog-header">
+        <div>
+          <h2>Get started with ScreenAtlas</h2>
+        </div>
+        <button
+          class="close"
+          data-close="guide-dialog"
+          aria-label="Close guide"
+        >
+          ×
+        </button>
+      </div>
+      <div class="dialog-body guide">
+        <p class="lead">
+          Turn your app idea into screens you can review and build.
+        </p>
+        <section class="codex-handoff" aria-label="Codex starter prompt">
+          <h3>Copy this into Codex</h3>
+          <p id="handoff-project" class="small-note"></p>
+          <div class="button-row">
+            <button id="copy-codex-prompt" class="primary">
+              Copy Codex prompt
+            </button>
+          </div>
+          <p
+            id="handoff-status"
+            class="small-note"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <details class="prompt-preview">
+            <summary>Preview prompt</summary>
+            <label for="codex-prompt">Your project prompt</label>
+            <textarea
+              id="codex-prompt"
+              rows="8"
+              readonly
+              spellcheck="false"
+            ></textarea>
+          </details>
+        </section>
+        <ol>
+          <li>
+            <strong>Describe your app in Codex.</strong> Use the prompt above,
+            paste it into Codex, and fill in your idea, platform, and visual
+            style. Attach reference images if you have them. Codex plans the
+            screens and groups for your app.
+          </li>
+          <li>
+            <strong>Generate and review the first designs.</strong> Codex uses
+            its available image tool and imports PNG proposals into this map.
+            Select a screen, open Inspect images, and leave feedback. Accept a
+            design you want to keep, then choose Promote to reference.
+          </li>
+          <li>
+            <strong>Build from the approved map.</strong> Expand the flows with
+            Codex and implement your app. Add screenshots from the running app
+            later to compare the result with your approved references.
+          </li>
+        </ol>
+        <p class="scope-note">
+          Codex generates design references. ScreenAtlas organizes and reviews
+          them. Image generation must be available in your Codex session, or you
+          can supply PNGs. ScreenAtlas does not call an image service or require
+          an API key.
+        </p>
+        <details class="new-project-guide">
+          <summary>Start a different project</summary>
+          <p>
+            Keep each app in its own map folder. From your ScreenAtlas
+            environment, run:
+          </p>
+          <pre><code>screen-atlas start /path/to/new-map --name "My app"</code></pre>
+          <p>
+            Your app's code can live in another folder. The demo is an example,
+            not a required template or a fixed set of tabs.
+          </p>
+        </details>
+        <h3>Find your way</h3>
+        <p>
+          Drag the canvas to pan. Scroll to zoom around the pointer.
+          Shift-scroll pans. Use checkboxes to show or hide groups and
+          individual screens. Group names focus the canvas; arrows only expand
+          the sidebar. Double-click a card to inspect images. Edit layout
+          enables card dragging; the screen editor also exposes placement
+          fields.
+        </p>
+        <p>
+          The overview shows the main flow. Select a screen to explore outgoing
+          connections, then switch to Incoming or All. Hover or focus an action
+          to isolate its arrow. Fit connections shows the related screens.
+        </p>
+        <p>
+          <kbd>0</kbd> fit enabled groups / <kbd>F</kbd> focus selection /
+          <kbd>＋</kbd> / <kbd>−</kbd> zoom / Arrow keys pan /
+          <kbd>/</kbd> search / <kbd>C</kbd> feedback
+        </p>
+        <h3>Local by design</h3>
+        <p>
+          Your project files hold curated references and contracts. The local
+          review store holds feedback, proposals, screenshots, and exact image
+          versions. Browser storage holds drafts and view preferences only. Keep
+          full private backups; read-only exports exclude review content unless
+          you explicitly include it.
+        </p>
+        <p class="small-note" id="agent-guide-note">
+          The installation includes an agent skill and JSON command interface.
+          The README explains imports, promotion, backup, export, and recovery.
+        </p>
+      </div>
+    </dialog>
+    <noscript
+      >ScreenAtlas needs JavaScript. Portable contracts remain available in
+      atlas.json.</noscript
+    >
+  </body>
+</html>

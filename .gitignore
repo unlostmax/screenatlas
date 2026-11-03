@@ -1,0 +1,11 @@
+.atlas-local/
+**/.atlas-local/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.DS_Store
+node_modules/
+test-results/

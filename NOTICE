@@ -1,0 +1,18 @@
+ScreenAtlas's map navigation and local review workflow derive from the 3D Rep
+Screen Atlas developed by Kinesis Labs, supplied for this standalone extraction
+by Max Malouf. Reference checkpoint: 97ba644778a6b3a0d16a8f889038eb62851a11c4.
+
+The standalone implementation preserves and extends that workflow under the
+MIT license. Original application artwork, native applications, services,
+private review databases, and repository history are not included.
+
+The Second Sole showcase combines user-supplied design references and
+AI-generated derivatives/extensions created for this project with Codex's
+built-in Image Gen tool. Exact prompts and input/output digests are bundled.
+These are illustrative designs, not captures from a working marketplace or
+recorded human review decisions. Third-party sneaker names and marks remain
+with their respective owners; no affiliation or endorsement is implied.
+
+Interface icons: Feather v4.29.2, Copyright (c) 2013-2023 Cole Bemis.
+https://github.com/feathericons/feather (MIT; see atlas/web/feather-LICENSE.txt).
+Icons are bundled locally in app.js; no remote requests are made by the UI.
