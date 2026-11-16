@@ -145,5 +145,5 @@ or rename it based on new setup flags.
 - **Nothing is visible:** click **Show all**, then **Fit map**. Checkboxes control
   visibility; they do not remove screen records or review history.
 
-The [README](../README.md) covers advanced imports, optional agent-skill setup,
+The [agent and command guide](reference/agent-guide.md) covers advanced imports, optional agent-skill setup,
 private backups, read-only exports, and the complete file/command reference.

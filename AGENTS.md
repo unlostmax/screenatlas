@@ -26,3 +26,6 @@ These setup instructions apply when the user wants to use the tool. For work
 on ScreenAtlas's source, carry out the requested implementation without
 starting an app-design interview. Do not publish, deploy, or modify global
 agent configuration as part of installation.
+
+For command syntax, imports, review, and backup details, see
+[the agent guide](docs/reference/agent-guide.md).

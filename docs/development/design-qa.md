@@ -65,12 +65,12 @@ Map/connection captures use a 1920 × 1080 recording viewport; first-use
 captures use the default 1280 × 720 view. Temporary overrides are reset before
 handoff.
 
-- [Main-flow overview](docs/screenshots/map-overview.jpg)
-- [Selected screen connections](docs/screenshots/connections-detail.jpg)
-- [Isolated action](docs/screenshots/connection-focus.jpg)
-- [Home flow](docs/screenshots/home-tree.jpg)
-- [Profile flow](docs/screenshots/profile-flow.jpg)
-- [Search flow](docs/screenshots/shop-flow.jpg)
+- [Main-flow overview](../screenshots/map-overview.jpg)
+- [Selected screen connections](../screenshots/connections-detail.jpg)
+- [Isolated action](../screenshots/connection-focus.jpg)
+- [Home flow](../screenshots/home-tree.jpg)
+- [Profile flow](../screenshots/profile-flow.jpg)
+- [Search flow](../screenshots/shop-flow.jpg)
 
 The app remains local-only. No repository or package has been published.
 
@@ -106,9 +106,9 @@ session's runtime and browser checks ran on macOS, not Windows. This is a local
 beta, with user-provided Codex tool access and Python requirements, rather than
 a claim of universal platform certification or an autonomous image service.
 
-- [First-use guide](docs/screenshots/getting-started.jpg)
-- [New empty project](docs/screenshots/empty-project.jpg)
-- [Written setup guide](docs/getting-started.md)
+- [First-use guide](../screenshots/getting-started.jpg)
+- [New empty project](../screenshots/empty-project.jpg)
+- [Written setup guide](../getting-started.md)
 
 
 The final wheel was installed in an isolated environment. Its start command
@@ -126,4 +126,4 @@ and left window.getSelection().toString() empty. The starter prompt, outside the
 canvas, retained user-select: text and a keyboard Select all selected its entire
 3331-character value. No input or document selection behavior was disabled.
 
-- [Canvas after the pan verification](docs/screenshots/canvas-pan.jpg)
+- [Canvas after the pan verification](../screenshots/canvas-pan.jpg)
