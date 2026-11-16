@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import base64
+from contextlib import closing
 import json
 import os
 from pathlib import Path
@@ -27,7 +28,7 @@ def backup(store, destination):
     with store.project.locked(), tempfile.TemporaryDirectory(prefix="atlas-backup-") as temporary:
         data, etag = store.project.load()
         database = Path(temporary) / "review.sqlite3"
-        with store.connect() as source, sqlite3.connect(database) as target:
+        with store.connect() as source, closing(sqlite3.connect(database)) as target:
             source.backup(target)
         files = {"atlas.json": store.project.path.read_bytes(), ".atlas-local/review.sqlite3": database.read_bytes()}
         for node in data["nodes"]:

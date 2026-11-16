@@ -2,7 +2,7 @@
 import base64
 from concurrent.futures import ThreadPoolExecutor
 import copy
-from contextlib import redirect_stdout
+from contextlib import closing, redirect_stdout
 import http.client
 import io
 import json
@@ -531,6 +531,30 @@ class AtlasTest(unittest.TestCase):
         with self.assertRaises(Conflict):
             restore(file, destination)
 
+    def test_backup_closes_snapshot_connection_on_success_and_write_failure(self):
+        connect = sqlite3.connect
+        for fail_write in (False, True):
+            with self.subTest(fail_write=fail_write):
+                snapshots = []
+
+                def track(database, *args, **kwargs):
+                    db = connect(database, *args, **kwargs)
+                    if Path(database).parent.name.startswith("atlas-backup-"):
+                        snapshots.append(db)
+                    return db
+
+                with patch("atlas.transfer.sqlite3.connect", side_effect=track):
+                    destination = self.directory / f"closed-{fail_write}.zip"
+                    if fail_write:
+                        with patch("atlas.transfer.atomic_write", side_effect=OSError("Write failed")):
+                            with self.assertRaisesRegex(OSError, "Write failed"):
+                                backup(self.store, destination)
+                    else:
+                        backup(self.store, destination)
+                self.assertEqual(len(snapshots), 1)
+                with self.assertRaises(sqlite3.ProgrammingError):
+                    snapshots[0].execute("SELECT 1")
+
     def test_restore_rejects_tampering_and_path_injection(self):
         self.comment()
         valid = self.directory / "backup.zip"
@@ -580,7 +604,7 @@ class AtlasTest(unittest.TestCase):
         old.write(data)
         thread_id = str(uuid.uuid4())
         database = old.local / "review.sqlite3"
-        with sqlite3.connect(database) as db:
+        with closing(sqlite3.connect(database)) as db, db:
             sql = MIGRATIONS[0].read_text()
             db.executescript(sql)
             db.execute("INSERT INTO migrations VALUES(1,?)", (digest(sql.encode()),))
