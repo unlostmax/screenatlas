@@ -110,7 +110,7 @@ Run `atlas --project PATH COMMAND --help` for exact arguments.
 
 | Purpose | Commands |
 | --- | --- |
-| Project setup | `init`, `inspect`, `context`, `templates`, `new-id` |
+| Project setup | `init`, `handoff --port`, `inspect`, `context`, `templates`, `new-id` |
 | Curated authoring | `project-set --etag`, `add-screen --etag`, `retire-screen --etag` |
 | Feedback | `list --status`, `comment`, `status`, `reply --body-file --preview` |
 | Design candidates | `import-proposals`, `proposals`, `accept --reviewed`, `promote --etag` |

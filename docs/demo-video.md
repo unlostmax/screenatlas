@@ -1,19 +1,21 @@
 # Record a ScreenAtlas tutorial
 
-Open the [public repository](https://github.com/unlostmax/screenatlas) and show
-the quickstart in the README. From the checkout on macOS or Linux:
+Open the [public repository](https://github.com/unlostmax/screenatlas) in Codex
+and ask it to install and start ScreenAtlas, then guide you through planning
+your app. The agent reads its setup instructions and continues in the same chat.
+It uses an existing app brief when available, or asks "What are we building?"
+There is no browser prompt-copying step on this path.
 
-```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install .
-.venv/bin/python -m screen_atlas start ../my-app-map --name "My app"
-```
+Attach two or three inspiration images when asked. Show Codex generating two
+or three mood images without UI or typography by default. The agent stores your
+supplied references and the generated moods in Inspiration and opens the local
+viewer for review. Choose a direction, then generate the first two app screens
+from those approved mood images. Demonstrate Inspect images, Accept this
+proposal, and Promote to reference.
 
-Open the local URL printed in the terminal. Click **Get started**, then **Copy
-Codex prompt**. Paste it into Codex and fill in the app idea, platform, and visual
-direction. Show where the first PNG proposals appear, then demonstrate **Inspect
-images**, **Accept this proposal**, and **Promote to reference**. Prepare a
-proposal ahead of filming if you want to skip the generation wait.
+Prepare this stage ahead of filming or edit out generation time. A terminal-only
+install prints the short handoff for the user to send to Codex; installing a
+Python package alone does not start an agent conversation.
 
 Use the bundled Second Sole demo for a populated map walkthrough. Keep the
 first server running and use a second terminal in the checkout:

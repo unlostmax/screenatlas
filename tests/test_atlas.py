@@ -55,7 +55,8 @@ class AtlasTest(unittest.TestCase):
         self.assertEqual(data["nodes"], [])
         self.assertEqual(len(data["groups"]), 1)
         self.assertIn("http://127.0.0.1:53100/", output.getvalue())
-        self.assertIn("Copy Codex prompt", output.getvalue())
+        self.assertIn("Agent setup is ready", output.getvalue())
+        self.assertIn(project_handoff(Project(destination), 53100)["prompt"], output.getvalue())
         self.assertEqual(Store(destination).snapshot()["versions"], [])
 
     def test_start_reopens_existing_project_without_replacing_it(self):
@@ -83,9 +84,11 @@ class AtlasTest(unittest.TestCase):
         handoff = project_handoff(project, 53101)
         self.assertEqual(handoff["projectDirectory"], str(project.root))
         self.assertIn("http://127.0.0.1:53101/", handoff["prompt"])
-        self.assertIn("do not copy the demo", handoff["prompt"])
-        self.assertIn("stop for my design review", handoff["prompt"])
-        self.assertIn("landscape", handoff["prompt"])
+        workflow = Path(json.loads(next(line.removeprefix("Workflow: ") for line in
+                                       handoff["prompt"].splitlines() if line.startswith("Workflow: "))))
+        self.assertTrue(workflow.is_file())
+        self.assertTrue((workflow.parent / "SKILL.md").is_file())
+        self.assertLess(len(handoff["prompt"]), 1800)
         if os.name != "nt":
             result = subprocess.run([*shlex.split(handoff["command"]), "inspect"], cwd=self.directory,
                                     capture_output=True, text=True)
@@ -94,6 +97,10 @@ class AtlasTest(unittest.TestCase):
                                     capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(json.loads(result.stdout)["project"]["name"], "Desktop task planner")
+        before = project.load()
+        recovered = cli.run(cli.parser().parse_args(["--project", str(project.root), "handoff", "--port", "53101"]))
+        self.assertEqual(recovered, handoff)
+        self.assertEqual(project.load(), before)
 
     def test_showcase_init_preserves_references_and_has_no_fabricated_reviews(self):
         destination = self.directory / "showcase"
@@ -645,7 +652,7 @@ class AtlasTest(unittest.TestCase):
         status, onboarding, _ = call("GET", "/api/onboarding")
         self.assertEqual(status, 200)
         self.assertEqual(json.loads(onboarding)["projectDirectory"], str(self.project.root))
-        self.assertIn("import-proposals", json.loads(onboarding)["prompt"])
+        self.assertEqual(json.loads(onboarding), project_handoff(self.project, server.server_port))
         self.assertEqual(call("GET", "/api/onboarding", headers={"Sec-Fetch-Site": "cross-site"})[0], 403)
         self.assertIn("frame-ancestors 'none'", headers["Content-Security-Policy"])
         good = {"Origin": f"http://127.0.0.1:{port}", "X-Atlas-Token": token, "Content-Type": "application/json"}

@@ -11,9 +11,11 @@ Download or clone this repository from GitHub. Open a terminal in that folder.
 You need Python 3.11+ with SQLite 3.37+. ScreenAtlas has no runtime package
 dependencies, accounts, or API keys. Installation may download Python build tools.
 
-You can also open the checkout in Codex and ask it to install ScreenAtlas in a
-virtual environment, start a separate empty map for your app, and show you that
-map's Codex starter prompt. Ask it to keep the ScreenAtlas source unchanged.
+The easiest path is to open the checkout in Codex and ask it to install and start
+ScreenAtlas, then guide you through planning your app. The repository's agent
+instructions tell it to create a separate map, keep the server running, and begin
+the app questions in the same conversation. You do not need to open the browser
+or copy a prompt first. It opens the viewer when there are images to review.
 
 On macOS or Linux:
 
@@ -31,7 +33,10 @@ py -3 -m venv .venv
 .\.venv\Scripts\python.exe -m screen_atlas start ..\my-app-map --name "My app"
 ```
 
-Click the local URL printed in the terminal. Keep that terminal running while
+For manual installation, the terminal prints a short handoff to paste into Codex.
+Run `screen-atlas --project ../my-app-map handoff` to retrieve it again from an
+activated environment. Installation alone cannot start an agent conversation.
+Keep that terminal running while
 using the app. `start` creates a new map folder or reopens an existing map without
 replacing it. Your application code can live in a separate folder.
 
@@ -45,11 +50,13 @@ Windows users can use the same arguments after `python.exe -m screen_atlas`.
 
 ## 2. Give Codex your app idea
 
-1. Click **Get started** in ScreenAtlas.
-2. Click **Copy Codex prompt**.
-3. Open your app's folder in Codex and paste the prompt into a chat.
-4. Fill in the app idea, platform, visual style, and code folder. Attach any
-   reference images you want Codex to use, then send it.
+1. Continue in the conversation where Codex installed ScreenAtlas. For a manual
+   install, paste the terminal's short handoff into Codex and send it as-is.
+2. Codex uses the brief in your app repository when available. Otherwise it
+   starts with "What are we building?" and asks a short follow-up only if needed.
+3. When Codex asks, attach two or three inspiration images you like. You can
+   use photos, objects, artwork, interiors, or interface references. Optionally
+   tell Codex which qualities you want to carry through.
 
 The copied prompt already includes the correct map folder, working commands,
 and bundled workflow. You do not need to install a skill, set an API key, or
@@ -62,10 +69,22 @@ It should create groups for those navigation sections, put each main screen at
 the top, and branch downward to the related states. There is no required number
 of tabs or platform-specific UI framework.
 
-Ask for one main screen and one supporting state first. Codex reads the map,
-creates stable screen records and actions, generates individual PNG designs,
-and imports them as proposals. The map updates as files change; new groups
-appear automatically. More screens can be added after you review the direction.
+Codex waits for your references, then generates two or three separate mood
+images from them. These explore atmosphere, palette, lighting, materials, and
+texture. They contain no UI components or typography unless you explicitly ask.
+Your supplied references and generated mood images are saved on separate boards
+in the **Inspiration** group, apart from app navigation. They can be reviewed,
+hidden, and revisited like the other map images. Choose or refine a
+direction and review the exact images before moving on to screen design.
+If you want to skip supplying inspiration images, tell Codex and describe the
+look you want instead.
+
+Once you approve a direction, Codex records it and uses the approved mood
+images as visual inputs for your app screens, including later additions and
+revisions. Start with one main screen and one supporting state. Codex creates
+stable screen records, behavior descriptions, and actions, then imports the
+generated PNG designs as proposals. The map updates as files change; new groups
+appear automatically. Review these screens before expanding the map.
 
 **Image generation must be available in that Codex session.** OpenAI's
 [image-generation guide](https://learn.chatgpt.com/docs/image-generation) describes

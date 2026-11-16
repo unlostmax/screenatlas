@@ -14,6 +14,21 @@ screen. Contracts own behavior; image references do not establish behavior,
 native operation, accessibility, or release readiness. ScreenAtlas edges describe
 intended routes rather than verified application routing.
 
+When setting up a new app, begin the guided conversation after installation;
+browser buttons are optional. The project handoff names the staged workflow.
+Ask a few brief app questions, then request two or three user-supplied inspiration
+images and wait for them. Generate two or three separate mood images from those
+inputs before designing screens. Default to atmosphere, palette, lighting,
+materials, and texture without UI components or typography; include either only
+when explicitly requested. Store supplied references as kind=anchor nodes and
+generated moods as kind=sheet nodes in a dedicated Inspiration group, with no
+navigation actions. Keep original inputs and actual provenance. Stop for the user's
+direction review before app screen generation. Record the chosen direction and
+exact approved reference identities in a supporting document. Use those mood
+images as visual inputs for subsequent screens and revisions, link contracts to
+the direction document, and preserve actual input digests in provenance. Continue
+an existing approved direction without repeating the interview unnecessarily.
+
 For pinned feedback, read the complete thread and its exact image identity.
 Use `status ID in_progress --revision N --operation UUID`, then implement the
 requested work. Replies support `--body-file`, `--preview PNG`, and `--status

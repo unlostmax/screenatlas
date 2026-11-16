@@ -13,6 +13,7 @@ import zipfile
 
 from . import __version__
 from .core import Conflict, Invalid, canonical
+from .onboarding import project_handoff
 from .project import Project, connections, contract, initialize
 from .server import make_server
 from .store import DECISIONS, STATUSES, Store, encode_file
@@ -36,6 +37,8 @@ def parser():
     init.add_argument("--example", action="store_true", help="Copy the Second Sole sneaker marketplace example")
     serve = commands.add_parser("serve", help="Serve on loopback only")
     serve.add_argument("--port", type=int, default=8765)
+    handoff = commands.add_parser("handoff", help="Read the short agent starter prompt without opening the browser")
+    handoff.add_argument("--port", type=int, default=8765, help="Port of the project's local viewer")
     commands.add_parser("inspect", help="Read project, review history and exact image identities")
     commands.add_parser("check", help="Validate portable inventory and report authoring warnings")
     commands.add_parser("doctor", help="Verify review database, schema and recorded image integrity")
@@ -120,7 +123,8 @@ def serve_project(store, port):
     server = make_server(store, port)
     print(f"ScreenAtlas — {data['name']}", flush=True)
     print(f"http://127.0.0.1:{server.server_port}/", flush=True)
-    print("Click Get started, then Copy Codex prompt. Paste it into Codex and add your app idea.", flush=True)
+    print("Agent setup is ready. Continue with this handoff in your agent conversation:", flush=True)
+    print(project_handoff(store.project, server.server_port)["prompt"], flush=True)
     print(f"Project: {store.project.root}", flush=True)
     print("Keep this window open. Press Ctrl+C to stop. Your work stays saved locally.", flush=True)
     try:
@@ -180,6 +184,8 @@ def run(args):
     if command == "restore":
         return restore(args.file, args.directory)
     project = Project(args.project)
+    if command == "handoff":
+        return project_handoff(project, args.port)
     if command == "check":
         return project.check()
     if command in ("project-set", "add-screen", "retire-screen"):

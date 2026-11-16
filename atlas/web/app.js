@@ -430,8 +430,9 @@
   function renderInventory() {
     const live = [...nodes.values()].filter((node) => !node.retired);
     const shown = visibleNodes();
-    const boards = live.filter((node) => node.kind === "anchor").length;
-    const shownBoards = shown.filter((node) => node.kind === "anchor").length;
+    const isBoard = (node) => node.kind === "anchor" || node.kind === "sheet";
+    const boards = live.filter(isBoard).length;
+    const shownBoards = shown.filter(isBoard).length;
     const count = (visible, total, noun) =>
       `${visible === total ? total : `${visible}/${total}`} ${noun}${total === 1 ? "" : "s"}`;
     const inventory = [
@@ -1517,7 +1518,7 @@
       const handoff = await request("/api/onboarding");
       $("codex-prompt").value = handoff.prompt;
       $("handoff-project").textContent =
-        `For ${handoff.projectName}.${state.project.nodes.length ? " Continues this map; use Start a different project below for a new app." : " Fill in the app idea and platform after pasting."}`;
+        `For ${handoff.projectName}.${state.project.nodes.length ? " Continues this map; use Start a different project below for a new app." : " Send it as-is. Codex will ask about your app."}`;
       $("copy-codex-prompt").disabled = false;
     } catch (error) {
       $("handoff-project").textContent = "Could not load the project prompt.";
@@ -1529,12 +1530,12 @@
     try {
       await navigator.clipboard.writeText($("codex-prompt").value);
       $("handoff-status").textContent =
-        "Copied. Paste into Codex, fill in your app idea, and send it.";
+        "Copied. Paste into Codex and send. It will ask about your app and inspiration images.";
     } catch {
       $("codex-prompt").focus();
       $("codex-prompt").select();
       $("handoff-status").textContent =
-        "Copy the selected prompt, then paste it into Codex and fill in your app idea.";
+        "Copy the selected prompt, paste into Codex, and send. It will guide you from there.";
     }
   }
   function blankContract() {

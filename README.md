@@ -15,7 +15,19 @@ licensed. The project was previously called Atlas; existing `atlas` commands,
 
 ## Start your own app
 
-Clone the repository and open its folder. You need
+Open this repository in Codex and ask:
+
+> Install and start ScreenAtlas, then guide me through planning my app.
+
+The agent reads your existing app brief when available, or starts with
+"What are we building?", then asks for two or three inspiration images. There
+is no browser setup or prompt-copying step. The agent generates mood images,
+saves your inputs and the results in an **Inspiration** group, and opens the map
+for review. Approve a direction before it designs the app screens.
+
+For a manual terminal install:
+
+Download or clone this repository, then open a terminal in its folder. You need
 Python 3.11+ with SQLite 3.37+. On macOS or Linux:
 
 ```sh
@@ -26,11 +38,15 @@ python3 -m venv .venv
 .venv/bin/python -m screen_atlas start ../my-app-map --name "My app"
 ```
 
-Open the printed local URL, click **Get started**, then **Copy Codex prompt**.
-Paste it into Codex and fill in your app idea, platform, and visual direction.
-Codex plans your screens, generates PNG references with its available image tool,
-and imports them into your map. Start with two designs, review them in
-ScreenAtlas, then expand the map and build your app.
+The command prints a short agent handoff. Paste that into Codex and send it as-is;
+you can also recover it with `screen-atlas --project ../my-app-map handoff`.
+A terminal-only install does not start a Codex conversation automatically.
+Codex asks a few questions about your app,
+then asks for two or three inspiration images you like. Using its available
+image tool, it generates two or three mood images without UI or typography
+unless you ask. Review and approve the direction first. Codex then uses those
+mood images to design your app screens and import proposals into your map.
+Review the first two screens, expand the map, then build your app.
 
 ScreenAtlas works with your app's own screens and navigation, including web,
 mobile, and desktop layouts. It does not require the demo's five tabs. Image
@@ -38,12 +54,6 @@ generation must be available in your Codex session; you can also supply PNGs.
 ScreenAtlas itself runs locally without an image API or account.
 
 **[Full getting-started guide, Windows instructions, and troubleshooting](docs/getting-started.md)**
-
-Prefer Codex to handle installation? Open this checkout in Codex and ask:
-
-> Install and run ScreenAtlas in a local virtual environment. Create a separate
-> empty map for my app named [my app name], keep ScreenAtlas's source unchanged,
-> and show me that project's Codex starter prompt.
 
 To explore the optional demo instead:
 
